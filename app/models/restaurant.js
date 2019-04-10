@@ -1,30 +1,30 @@
 const mongoose = require('mongoose')
 
-const dishSchema = new mongoose.Schema({
+const restaurantSchema = new mongoose.Schema({
   imgUrl: {
     type: String,
     required: true
   },
-  text: {
+  name: {
     type: String,
     required: true
   },
-  geolocation: {
+  address: {
     type: String,
     required: true
   },
-  timetaken: {
+  phone: {
     type: String,
+    required: true
+  },
+  customer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Customer',
     required: true
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    required: true
-  },
-  restaurant: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Restaurant',
     required: true
   }
 },
@@ -32,4 +32,4 @@ const dishSchema = new mongoose.Schema({
   timestamps: true
 })
 
-module.exports = mongoose.model('Dish', dishSchema)
+module.exports = mongoose.model('Restaurant', restaurantSchema)
