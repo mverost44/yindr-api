@@ -1,6 +1,7 @@
 #!/bin/bash
 
-API="http://localhost:4741"
+# API="http://localhost:4741"
+API="https://afternoon-hollows-52352.herokuapp.com"
 URL_PATH="/sign-up"
 
 curl "${API}${URL_PATH}" \

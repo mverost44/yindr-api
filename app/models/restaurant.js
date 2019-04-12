@@ -22,8 +22,7 @@ const restaurantSchema = new mongoose.Schema({
   },
   customer: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Customer',
-    required: true
+    ref: 'Customer'
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
