@@ -14,8 +14,7 @@ const restaurantSchema = new mongoose.Schema({
     required: true
   },
   distanceFromCustomer: {
-    type: String,
-    required: true
+    type: String
   },
   phone: {
     type: String,

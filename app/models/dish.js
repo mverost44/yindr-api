@@ -5,9 +5,12 @@ const dishSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  text: {
+  title: {
     type: String,
     required: true
+  },
+  desc: {
+    type: String
   },
   geolocation: {
     type: String,
@@ -30,9 +33,6 @@ const dishSchema = new mongoose.Schema({
   numOfLikes: {
     type: Number
   },
-  numOfDislikes: {
-    type: Number
-  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
@@ -40,8 +40,7 @@ const dishSchema = new mongoose.Schema({
   },
   restaurant: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Restaurant',
-    required: true
+    ref: 'Restaurant'
   }
 },
 {
