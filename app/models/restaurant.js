@@ -13,6 +13,10 @@ const restaurantSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  distanceFromCustomer: {
+    type: String,
+    required: true
+  },
   phone: {
     type: String,
     required: true

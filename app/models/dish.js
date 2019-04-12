@@ -17,6 +17,22 @@ const dishSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  price: {
+    type: String,
+    required: true
+  },
+  healthyRating: {
+    type: String
+  },
+  like: {
+    type: Boolean
+  },
+  numOfLikes: {
+    type: Number
+  },
+  numOfDislikes: {
+    type: Number
+  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
